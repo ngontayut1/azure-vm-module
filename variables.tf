@@ -1,3 +1,32 @@
+## Image variables. This is global image on all Subs
+variable "sub_id_img" {
+  type        = string
+  description = "Subsription ID information"
+  default     = ""
+}
+
+variable "rg_name_img" {
+  type        = string
+  description = "rg_name_img"
+}
+
+variable "gallery" {
+  type        = string
+  description = "gallery"
+}
+
+variable "image_name" {
+  type        = string
+  description = "image_name"
+}
+
+variable "image_version" {
+  type        = string
+  description = "image_version"
+}
+
+## Reaminig Variables
+
 variable "admin_username" {
   type        = string
   default     = "adminroot"
@@ -28,24 +57,13 @@ variable "virtual_machine_nic_ip_address" {
   description = "The Static IP Address which should be used."
 }
 
-variable "enable_accelerated_networking" {
-  type        = bool
-  default     = false
-  description = "Should Accelerated Networking be enabled? Defaults to false."
-}
 
 variable "virtual_machine_nic_subnet_id" {
   type        = string
   default     = ""
   description = "The ID of the Subnet where this Network Interface should be located in."
 }
-/*
-variable "virtual_machine_sku" {
-  type        = string
-  default     = "2022-Datacenter"
-  description = "Specifies the SKU of the image used to create the virtual machines. Changing this forces a new resource to be created."
-}
-*/
+
 
 variable "availability_zone" {
   type        = string
@@ -88,12 +106,6 @@ variable "os_disk_caching" {
   description = "Specifies the caching requirements for the OS Disk"
 }
 
-###############
-variable "image_name" {
-  type = string
-
-  description = "image_name"
-}
 variable "vm_size" {
   type = string
 
@@ -131,3 +143,17 @@ variable "lvmh_msp" {
   type        = string
 
 }
+
+/*
+variable "enable_accelerated_networking" {
+  type        = bool
+  default     = false
+  description = "Should Accelerated Networking be enabled? Defaults to false."
+}
+
+variable "virtual_machine_sku" {
+  type        = string
+  default     = "2022-Datacenter"
+  description = "Specifies the SKU of the image used to create the virtual machines. Changing this forces a new resource to be created."
+}
+*/
